@@ -4,7 +4,7 @@ import './style.css';
 const allList = [
   {
     index: 1,
-    description: 'jQuery Library',
+    description: 'Tailwind Library',
     complated: false,
   },
   {
@@ -14,7 +14,7 @@ const allList = [
   },
   {
     index: 3,
-    description: 'jQuery Library',
+    description: 'Bulmas Library',
     complated: false,
   },
 ];
@@ -25,12 +25,13 @@ const displayList = () => {
   for (let i = 0; i < allList.length; i += 1) {
     bkList.innerHTML += `
     <div class='align-row'>
-      <div>
+      <div class='label-checkbox'>
         <input type="checkbox" id="check" name="check" >
         <label class="label" id="label" for="check">${allList[i].description}</label>
       </div>
       <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
     </div>
+    <hr>
   `;
   }
 }
