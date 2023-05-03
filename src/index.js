@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import './style.css';
 
 const allList = [
@@ -34,6 +33,6 @@ const displayList = () => {
     <hr>
   `;
   }
-}
+};
 
 window.onload = displayList();
