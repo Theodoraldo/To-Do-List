@@ -64,3 +64,7 @@ input[type='text'] {
 .label-checkbox input[type='checkbox'] {
   margin-right: 20px;
 }
+
+i {
+  cursor: pointer;
+}
