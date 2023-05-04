@@ -2,8 +2,6 @@ import './style.css';
 import NewTasks from './module/newdata';
 import { displayList } from './module/loaddata';
 
-window.onload = displayList();
-
 const aNew = document.getElementById('editTask');
 aNew.addEventListener('keypress', (e) => {
   if (e.key === "Enter") {
@@ -20,3 +18,5 @@ const refresh = document.getElementById('refresh');
 refresh.addEventListener('click', () => {
   displayList();
 });
+
+window.onload = displayList();
