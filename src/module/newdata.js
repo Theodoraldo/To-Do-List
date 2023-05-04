@@ -1,4 +1,4 @@
-const taskStorage = JSON.parse(localStorage.getItem('taskList')) || [];
+export let taskStorage = JSON.parse(localStorage.getItem('taskList')) || [];
 
 export default class NewTasks {
   constructor(task) {
@@ -17,7 +17,7 @@ export default class NewTasks {
         description: this.task,
         completed: false,
         key: id,
-      }
+      };
       taskStorage.push(doList);
       localStorage.setItem('taskList', JSON.stringify(taskStorage));
     }
