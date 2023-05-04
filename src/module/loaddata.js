@@ -1,4 +1,4 @@
-import { taskStorage } from "./newdata";
+import { taskStorage } from './newdata.js';
 
 const bkList = document.querySelector('.listTodo');
 
@@ -20,7 +20,6 @@ export default displayList = () => {
     <hr>
   `;
   }
-
 
   const deleteToDo = () => {
     const remoVingBtnsEl = [...document.getElementsByClassName('delete')];

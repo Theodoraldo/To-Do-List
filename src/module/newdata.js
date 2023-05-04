@@ -1,4 +1,4 @@
-export let taskStorage = JSON.parse(localStorage.getItem('taskList')) || [];
+export const taskStorage = JSON.parse(localStorage.getItem('taskList')) || [];
 
 export default class NewTasks {
   constructor(task) {
