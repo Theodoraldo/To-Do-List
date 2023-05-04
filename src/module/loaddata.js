@@ -21,7 +21,8 @@ export default displayList = () => {
   `;
   }
 
-  const deleteBook = () => {
+
+  const deleteToDo = () => {
     const remoVingBtnsEl = [...document.getElementsByClassName('delete')];
     remoVingBtnsEl.forEach((item) => {
       item.addEventListener('click', (e) => {
@@ -31,5 +32,5 @@ export default displayList = () => {
       });
     });
   };
-  deleteBook();
+  deleteToDo();
 };
