@@ -10,8 +10,8 @@ export default displayList = () => {
     <div class='align-row'>
       <div class='label-checkbox'>
         <input type="checkbox" id="check" name="check" >
-        <label class="label" id=${taskStorage[i].keys} for="check">${taskStorage[i].description}</label>
-      </div>
+        <input type="text" disabled class="inputEdit" id=${taskStorage[i].keys} value="${taskStorage[i].description}"/>
+     </div>
      <div>
         <span class="delete" id=${i}><i class="fa fa-trash" aria-hidden="true"></i></span>
         <span class="edit"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
@@ -22,14 +22,31 @@ export default displayList = () => {
   }
 
   const deleteToDo = () => {
-    const remoVingBtnsEl = [...document.getElementsByClassName('delete')];
-    remoVingBtnsEl.forEach((item) => {
-      item.addEventListener('click', (e) => {
-        taskStorage.splice(e.target.id, 1);
+    const deleteBtn = [...document.getElementsByClassName('delete')];
+    deleteBtn.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        taskStorage.splice(i, 1);
         localStorage.setItem('taskList', JSON.stringify(taskStorage));
         displayList();
       });
     });
   };
   deleteToDo();
+
+  const editToDo = () => {
+    const editBtn = document.querySelectorAll('.edit');
+    const lableEdit = document.querySelectorAll('.inputEdit');
+    const backEdit = document.querySelectorAll('.align-row');
+    editBtn.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        lableEdit[i].disabled = false;
+        lableEdit[i].focus();
+        lableEdit[i].style.backgroundColor = 'cornflowerblue';
+        backEdit[i].style.backgroundColor = 'cornflowerblue';
+        lableEdit[i].style.color = 'white';
+        lableEdit[i].style.fontWeight = 'bold';
+      });
+    });
+  };
+  editToDo();
 };
