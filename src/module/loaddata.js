@@ -90,3 +90,10 @@ export default displayList = () => {
   };
   saveEditToDo();
 };
+
+const deleteSelection = document.querySelector('.btn-empty');
+deleteSelection.addEventListener('click', () => {
+  const newTasStorage = taskStorage.filter((taskStorage) => taskStorage.completed !== true);
+  localStorage.setItem('taskList', JSON.stringify(newTasStorage));
+  document.location.reload();
+});
