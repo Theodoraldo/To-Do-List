@@ -12,7 +12,6 @@ const resetToDoKey = () => {
 
 let displayList;
 export default displayList = () => {
-  console.log(checkState());
   bkList.innerHTML = '';
   for (let i = 0; i < taskStorage.length; i += 1) {
     bkList.innerHTML += `
