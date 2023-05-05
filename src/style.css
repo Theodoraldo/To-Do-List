@@ -33,7 +33,7 @@ form {
   width: 80%;
 }
 
-input[type='text'] {
+#editTask {
   width: 100%;
   border: none;
   outline: none;
@@ -63,4 +63,27 @@ input[type='text'] {
 
 .label-checkbox input[type='checkbox'] {
   margin-right: 20px;
+}
+
+i {
+  cursor: pointer;
+}
+
+.delete {
+  margin-right: 20px;
+}
+
+.btn-empty:hover {
+  cursor: pointer;
+}
+
+.inputEdit {
+  border: none;
+  outline: none;
+  font-size: 17px;
+  width: 80%;
+}
+
+.inputEdit:disabled {
+  background-color: #fff;
 }
