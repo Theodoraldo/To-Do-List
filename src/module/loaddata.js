@@ -2,6 +2,13 @@ import { taskStorage } from './newdata.js';
 
 const bkList = document.querySelector('.listTodo');
 
+function resetToDoKey() {
+  for (let i = 0; i < taskStorage.length; i += 1) {
+    taskStorage[i].key = i + 1;
+  }
+  localStorage.setItem('taskList', JSON.stringify(taskStorage));
+}
+
 let displayList;
 export default displayList = () => {
   bkList.innerHTML = '';
@@ -27,6 +34,7 @@ export default displayList = () => {
       item.addEventListener('click', () => {
         taskStorage.splice(i, 1);
         localStorage.setItem('taskList', JSON.stringify(taskStorage));
+        resetToDoKey();
         displayList();
       });
     });
@@ -49,4 +57,18 @@ export default displayList = () => {
     });
   };
   editToDo();
+
+  const saveEditToDo = () => {
+    const lableEdit = document.querySelectorAll('.inputEdit');
+    lableEdit.forEach((item, i) => {
+      item.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          taskStorage[i].description = lableEdit[i].value;
+          localStorage.setItem('taskList', JSON.stringify(taskStorage));
+          displayList();
+        }
+      });
+    });
+  };
+  saveEditToDo();
 };
