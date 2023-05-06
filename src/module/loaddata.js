@@ -1,13 +1,14 @@
 import { taskStorage } from './newdata.js';
+import checkState from './state.js';
 
 const bkList = document.querySelector('.listTodo');
 
-function resetToDoKey() {
+const resetToDoKey = () => {
   for (let i = 0; i < taskStorage.length; i += 1) {
     taskStorage[i].key = i + 1;
   }
   localStorage.setItem('taskList', JSON.stringify(taskStorage));
-}
+};
 
 let displayList;
 export default displayList = () => {
@@ -16,8 +17,8 @@ export default displayList = () => {
     bkList.innerHTML += `
     <div class='align-row'>
       <div class='label-checkbox'>
-        <input type="checkbox" id="check" name="check" >
-        <input type="text" disabled class="inputEdit" id=${taskStorage[i].keys} value="${taskStorage[i].description}"/>
+        <input type="checkbox" id="check" class="check" name="check" ${taskStorage[i].completed ? 'checked' : 'unchecked'}>
+        <input type="text" disabled class="inputEdit ${checkState(taskStorage[i].completed)}" id=${taskStorage[i].keys} value="${taskStorage[i].description}"/>
      </div>
      <div>
         <span class="delete" id=${i}><i class="fa fa-trash" aria-hidden="true"></i></span>
@@ -45,6 +46,7 @@ export default displayList = () => {
     const editBtn = document.querySelectorAll('.edit');
     const lableEdit = document.querySelectorAll('.inputEdit');
     const backEdit = document.querySelectorAll('.align-row');
+    const checkEdit = document.querySelectorAll('.check');
     editBtn.forEach((item, i) => {
       item.addEventListener('click', () => {
         lableEdit[i].disabled = false;
@@ -53,6 +55,22 @@ export default displayList = () => {
         backEdit[i].style.backgroundColor = 'cornflowerblue';
         lableEdit[i].style.color = 'white';
         lableEdit[i].style.fontWeight = 'bold';
+      });
+    });
+
+    checkEdit.forEach((item, i) => {
+      item.addEventListener('change', () => {
+        if (checkEdit[i].checked) {
+          lableEdit[i].style.textDecoration = 'line-through';
+          lableEdit[i].style.color = 'tomato';
+          taskStorage[i].completed = true;
+          localStorage.setItem('taskList', JSON.stringify(taskStorage));
+        } else {
+          lableEdit[i].style.textDecoration = 'none';
+          lableEdit[i].style.color = 'rgb(97, 94, 94)';
+          taskStorage[i].completed = false;
+          localStorage.setItem('taskList', JSON.stringify(taskStorage));
+        }
       });
     });
   };
@@ -72,3 +90,10 @@ export default displayList = () => {
   };
   saveEditToDo();
 };
+
+const deleteSelection = document.querySelector('.btn-empty');
+deleteSelection.addEventListener('click', () => {
+  const newTasStorage = taskStorage.filter((taskStorage) => taskStorage.completed !== true);
+  localStorage.setItem('taskList', JSON.stringify(newTasStorage));
+  document.location.reload();
+});

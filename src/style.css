@@ -87,3 +87,13 @@ i {
 .inputEdit:disabled {
   background-color: #fff;
 }
+
+.is_checked {
+  color: tomato;
+  text-decoration: line-through;
+}
+
+.not_checked {
+  color: rgb(97, 94, 94);
+  text-decoration: none;
+}

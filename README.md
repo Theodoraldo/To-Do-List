@@ -38,9 +38,11 @@
 
 # 📖 To-Do-List <a name="about-project"></a>
 
-**[To-Do-List]** is a Potfolio project I build.
+**To-Do-List** is an application that enable users to add and remove task.
 
 ## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
 
 <details>
   <summary>CSS</summary>
@@ -66,7 +68,7 @@
 <details>
   <summary>Webpack</summary>
   <ul>
-    <li><a https://webpack.js.org/">Webpack</a></li>
+    <li><a https="https://webpack.js.org/">Webpack</a></li>
   </ul>
 </details>
 
@@ -87,50 +89,24 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-install any text editor (I recommend Visual Studio Code)
-install webpack 
-install webpack-cli
-install webpack serve --open
+- install any text editor (I recommend Visual Studio Code)
+- install webpack 
+- install webpack-cli
+- install webpack serve --open
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-cd my-folder
-git clone https://github.com/Theodoraldo/To-Do-List.git
+- cd my-folder
+- git clone https://github.com/Theodoraldo/To-Do-List.git
 
 ### Install
 
 Install this project with:
-
-Install using Visual Code extention tab
-
-### Usage
-
-To run the project, execute the following command:
-
-### Run tests
-
-To run tests, run the following command:
-
-- run: 'npm run build'
-- run: 'npm start'
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](Will soon fix it)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Walkthrough Demo <a name="live-demo"></a>
-
-- [Walkthrogh Demo Link](not yet)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- Install using Visual Code extention tab
+- npm install
+- npm start
 
 <!-- AUTHORS -->
 
@@ -140,15 +116,14 @@ To run tests, run the following command:
 
 - GitHub: [@githubhandle](https://github.com/Theodoraldo)
 - Twitter: [@twitterhandle](https://twitter.com/AsimengOse33947)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/theodore-asimeng-osei-80075125b/
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/theodore-asimeng-osei-80075125b/)
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Javascript-ES6]**
-- [ ] **[CSS]**
-- [ ] **[Webpack]**
+- [ ] **[Animation]**
+- [ ] **[Database]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -166,25 +141,9 @@ If you like this project, kindly send your comments using the form in the portfo
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-- **[I can't open the project]**
-
-  - [Install liveserver on the Visual Code Editor ]
-  - [Open the project in VS code editor]
-  - [Click the live server icon at the bottom-right corner of VS code editor to lunch it ]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-s
