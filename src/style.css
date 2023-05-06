@@ -97,3 +97,9 @@ i {
   color: rgb(97, 94, 94);
   text-decoration: none;
 }
+
+@media only screen and (max-width: 650px) {
+  .section-task {
+    width: 95%;
+  }
+}
