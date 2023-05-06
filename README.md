@@ -105,18 +105,8 @@ Clone this repository to your desired folder:
 
 Install this project with:
 - Install using Visual Code extention tab
-
-### Usage
-
-To run the project, execute the following command:
-
-### Run tests
-
-To run tests, run the following command:
-
-- run: 'npm install'
-- run: 'npm run build'
-- run: 'npm start'
+- npm install
+- npm start
 
 <!-- AUTHORS -->
 
