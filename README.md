@@ -132,6 +132,7 @@ Install this project with:
 
 - [ ] **[Animation]**
 - [ ] **[Database]**
+- [ ] **[API]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
